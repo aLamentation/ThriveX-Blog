@@ -2,7 +2,7 @@ name = "zooms-blog"
 compatibility_date = "2025-10-01"
 compatibility_flags = ["nodejs_compat"]
 
-pages_build_output_dir = ".vercel/output/static"
+pages_build_output_dir = "/.vercel/output/static"
 
 [env.production.vars]
 NEXT_PUBLIC_CACHING_TIME = "1"

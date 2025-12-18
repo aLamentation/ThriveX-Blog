@@ -17,7 +17,7 @@ export default ({ data }: { data: Project[] }) => {
   return (
     <>
       <div data-aos="zoom-in" className="character pb-20">
-        <div className="text-center text-xl mb-8">我的作品</div>
+        {/*<div className="text-center text-xl mb-8">我的作品</div>*/}
 
         <div className="w-[80%] xl:w-[1200px] mx-auto">
           <div className="flex w-full flex-col">

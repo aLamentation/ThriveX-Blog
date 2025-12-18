@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Progress, Tooltip } from '@heroui/react';
-import INFJ from '@/assets/image/INFJ.png';
+import ISTPA from '@/assets/image/ISTPA.png';
 import { BiQuestionMark } from 'react-icons/bi';
 
 import AOS from 'aos';
@@ -34,10 +34,10 @@ export default ({ data }: Props) => {
 
       <div className="flex flex-col sm:flex-row justify-between items-center">
         <div className="flex sm:block w-[40%]">
-          <div className="text-[30px] sm:text-[40px] text-[#33a474] font-medium font-sans">提倡者</div>
-          <div className="text-[#666] dark:text-[#8c9ab1] hidden sm:block">INFJ</div>
-          <Image src={INFJ} alt="性格" width={200}></Image>
-          <Link href="https://www.16personalities.com/ch/infj-人格" className="block w-full mt-2 text-center text-[#666] text-xs hover:text-[#33a474]">
+          <div className="text-[30px] sm:text-[40px] text-[#33a474] font-medium font-sans">鉴赏家</div>
+          <div className="text-[#666] dark:text-[#8c9ab1] hidden sm:block">ISTP-A</div>
+          <Image src={ISTPA} alt="性格" width={200}></Image>
+          <Link href="https://www.16personalities.com/ch/ISTP-A-人格" className="block w-full mt-2 text-center text-[#666] text-xs hover:text-[#33a474]">
             了解一下
           </Link>
         </div>

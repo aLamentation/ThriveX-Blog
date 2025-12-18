@@ -30,6 +30,6 @@ NEXT_PUBLIC_CACHING_TIME = "1"
 # 运行: wrangler secret put NEXT_PUBLIC_PROJECT_API
 
 # Pages 配置（如果使用 Pages）
-[pages_build_output_dir]
-directory = ".next"
+# [pages_build_output_dir]
+# directory = ".next"
 

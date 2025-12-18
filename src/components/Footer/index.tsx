@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { getWebConfigDataAPI } from '@/api/config';
 import { getAuthorDataAPI } from '@/api/user';
 import { User } from '@/types/app/user';
 import { Web } from '@/types/app/config';
+import Tooltip from './components/Tooltip';
 import ICPBeian from './components/ICPBeian';
 
 import animals from './images/animals.webp';
@@ -34,17 +36,17 @@ export default async () => {
             为了项目的生态越来越强大，作者在这里恳请大家保留 ThriveX 博客系统版权
             在项目 Star 突破 2K 后大家可自由选择删除 or 保留版权
         */}
-        {/*<div className="py-4 border-t dark:border-black-a  ">*/}
-        {/*  <Tooltip content="一款免费、开源、年轻、高颜值的现代化博客管理系统">*/}
-        {/*    <div className="flex justify-center items-center space-x-3">*/}
-        {/*      <img src="https://res.liuyuyang.net/thrive/default/6931517ae4b0be1e79cb266a.png" width={30} height={30} alt="ThriveX 博客管理系统" />*/}
-        {/*      <Link href="https://github.com/LiuYuYang01/ThriveX-Admin" target="_blank" className="hover:text-primary  ">*/}
-        {/*        {' '}*/}
-        {/*        基于开源项目 ThriveX 构建*/}
-        {/*      </Link>*/}
-        {/*    </div>*/}
-        {/*  </Tooltip>*/}
-        {/*</div>*/}
+        <div className="py-4 border-t dark:border-black-a  ">
+          <Tooltip content="一款免费、开源、年轻、高颜值的现代化博客管理系统">
+            <div className="flex justify-center items-center space-x-3">
+              <img src="https://res.liuyuyang.net/thrive/default/6931517ae4b0be1e79cb266a.png" width={30} height={30} alt="ThriveX 博客管理系统" />
+              <Link href="https://github.com/LiuYuYang01/ThriveX-Admin" target="_blank" className="hover:text-primary  ">
+                {' '}
+                基于开源项目 ThriveX 构建
+              </Link>
+            </div>
+          </Tooltip>
+        </div>
       </div>
     </>
   );

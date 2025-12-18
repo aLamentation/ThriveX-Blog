@@ -2,11 +2,11 @@
 
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaPhone, FaEnvelope, FaBriefcase, FaGraduationCap, FaCode, FaUser, FaProjectDiagram } from 'react-icons/fa';
+import { FaGithub, FaPhone, FaEnvelope, FaGlobe, FaBriefcase, FaGraduationCap, FaCode, FaUser, FaProjectDiagram } from 'react-icons/fa';
 import { Resume } from '@/types/app/resume';
 
 export default ({ data }: { data: Resume }) => {
-  const { personalInfo, advantages, skills, workExperience, projects, education } = data || {};
+  const { personalInfo, advantages, links, skills, workExperience, projects, education } = data || {};
 
   const defaultPersonalInfo = {
     name: '神秘人',
@@ -30,16 +30,16 @@ export default ({ data }: { data: Resume }) => {
     },
   };
 
-  // const defaultLinks = {
-  //   github: 'https://github.com',
-  //   csdn: 'https://blog.csdn.net',
-  //   blog: 'https://example.com',
-  // };
+  const defaultLinks = {
+    github: 'https://github.com',
+    csdn: 'https://blog.csdn.net',
+    blog: 'https://example.com',
+  };
 
-  // const safeLinks = {
-  //   ...defaultLinks,
-  //   ...links,
-  // };
+  const safeLinks = {
+    ...defaultLinks,
+    ...links,
+  };
 
   const defaultEducation = {
     school: '未提供学校',
@@ -224,32 +224,32 @@ export default ({ data }: { data: Resume }) => {
               </motion.div>
 
               {/* 相关链接 */}
-              {/*<motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 border dark:border-black-a rounded-xl p-6">*/}
-                {/*<div className="flex items-center mb-4 text-gray-900 dark:text-white">*/}
-                {/*  <FaGlobe className="mr-3 text-blue-500" />*/}
-                {/*  <h3 className="text-lg font-bold">相关链接</h3>*/}
-                {/*</div>*/}
+              <motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 border dark:border-black-a rounded-xl p-6">
+                <div className="flex items-center mb-4 text-gray-900 dark:text-white">
+                  <FaGlobe className="mr-3 text-blue-500" />
+                  <h3 className="text-lg font-bold">相关链接</h3>
+                </div>
 
-                {/*<div className="space-y-3">*/}
-                {/*  {safeLinks?.github && (*/}
-                {/*    <a href={safeLinks.github || defaultLinks.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium transition-colors">*/}
-                {/*      <FaGithub className="mr-2" size={16} /> GitHub*/}
-                {/*    </a>*/}
-                {/*  )}*/}
+                <div className="space-y-3">
+                  {safeLinks?.github && (
+                    <a href={safeLinks.github || defaultLinks.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium transition-colors">
+                      <FaGithub className="mr-2" size={16} /> GitHub
+                    </a>
+                  )}
 
-                {/*  {safeLinks?.csdn && (*/}
-                {/*    <a href={safeLinks.csdn || defaultLinks.csdn} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium transition-colors">*/}
-                {/*      <FaGlobe className="mr-2" size={16} /> CSDN 技术博客*/}
-                {/*    </a>*/}
-                {/*  )}*/}
+                  {safeLinks?.csdn && (
+                    <a href={safeLinks.csdn || defaultLinks.csdn} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium transition-colors">
+                      <FaGlobe className="mr-2" size={16} /> CSDN 技术博客
+                    </a>
+                  )}
 
-                {/*  {safeLinks?.blog && (*/}
-                {/*    <a href={safeLinks.blog || defaultLinks.blog} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium transition-colors">*/}
-                {/*      <FaProjectDiagram className="mr-2" size={16} /> 开源项目作品*/}
-                {/*    </a>*/}
-                {/*  )}*/}
-                {/*</div>*/}
-              {/*</motion.div>*/}
+                  {safeLinks?.blog && (
+                    <a href={safeLinks.blog || defaultLinks.blog} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium transition-colors">
+                      <FaProjectDiagram className="mr-2" size={16} /> 开源项目作品
+                    </a>
+                  )}
+                </div>
+              </motion.div>
             </div>
 
             {/* 右侧栏 */}
@@ -287,7 +287,7 @@ export default ({ data }: { data: Resume }) => {
               <motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 border dark:border-black-a rounded-xl p-6">
                 <div className="flex items-center mb-5 text-gray-900 dark:text-white">
                   <FaProjectDiagram className="mr-3 text-blue-500" />
-                  <h3 className="text-lg font-bold">项目经历(保密)</h3>
+                  <h3 className="text-lg font-bold">项目经历</h3>
                 </div>
 
                 <div className="space-y-6">

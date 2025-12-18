@@ -33,10 +33,10 @@ export async function GET() {
     id: web?.url,
     link: web?.url,
     language: 'zh-CN',
-    copyright: '',
+    copyright: 'ThriveX 现代化博客管理系统',
     updated: new Date(),
     generator: '为爱发电',
-    docs: '',
+    docs: 'https://github.com/LiuYuYang01/ThriveX-Blog',
     author: {
       name: user?.name,
       email: user?.email,
@@ -62,7 +62,7 @@ export async function GET() {
             },
           ]
         : [],
-      copyright: '',
+      copyright: 'ThriveX 现代化博客管理系统',
       date: new Date(+item?.createTime),
     });
   });

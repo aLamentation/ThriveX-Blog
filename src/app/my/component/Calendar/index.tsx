@@ -9,7 +9,7 @@ export default () => {
 
   return (
     <>
-      <GitHubCalendar username="aLamentation" colorScheme={isDark ? 'dark' : 'light'} hideTotalCount />
+      <GitHubCalendar username="liuyuyang01" colorScheme={isDark ? 'dark' : 'light'} hideTotalCount />
     </>
   );
 };
